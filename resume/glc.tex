@@ -1,0 +1,125 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt, a4paper]{article}
+\usepackage{fontspec} 
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+\setmonofont[Scale=1.0]{LMMono10}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[dvipdfm, bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Giovanni Luca Ciampaglia - vita},
+	pdfauthor={Giovanni Luca Ciampaglia},
+	pdfproducer={http://www.inf.usi.ch/phd/ciampaglia/}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+% DOCUMENT
+\begin{document}
+{\LARGE Giovanni Luca Ciampaglia}\\[1cm]
+University of Lugano\\
+Via G. Buffi\\
+6900, Lugano
+Switzerland\\[.2cm]
+Phone: \texttt{+41 43 817 20 75}\\
+Fax: \texttt{609-924-8399}\\[.2cm]
+email: \href{mailto:ciampagg@usi.ch}{ciampagg@usi.ch}\\
+\textsc{url}: \href{http://www.inf.usi.ch/phd/ciampaglia/}{http://www.inf.usi.ch/phd/ciampaglia/}\\ 
+\vfill
+Born:  July 12, 1980 / Rome, Italy\\
+Nationality: Italian\\
+Languages: Italian (mother tongue), English (Fluent), French
+
+%%\hrule
+\section*{Current position}
+\emph{Ph.D. Candidate}, University of Lugano, Faculty of Informatics.
+
+%%\hrule
+\section*{Areas of specialization}
+Computer science • Social computing
+
+%%\hrule
+\section*{Appointments held}
+\noindent
+\years{2010-2011}ETH Zürich, research associate
+
+%\hrule
+\section*{Education}
+\noindent
+\years{2008}\textsc{Summer school}, Santa Fe Institute complex systems summer school, Santa Fe, USA.\\
+\years{2006}\textsc{MSc} in Computer science, University of Rome ``La Sapienza''.\\
+\years{2000}\textsc{Maturità Scientifica}
+
+% TODO aggiungere visita a ETH, definire i titoli (doctoral research fellowship)
+\section*{Grants, honors \& awards}
+\noindent
+\years{2008-2010}FNSNF project no. \texttt{200020-125128}, \emph{Mathematical modeling of
+online communities}\\
+\years{2006-2008}FNSNF project no. \texttt{200021-112420}, \emph{Continuum-state
+cellular automata and random differential equations -- A new approach to the
+modeling of complex systems}
+
+\section*{Publications \& talks}
+
+\subsection*{Peer-reviewed conference proceedings}
+\noindent
+\years{2010b}Dario Taraborelli, \textbf{GLC} (2010), ``Beyond notability. Collective deliberation on content inclusion in Wikipedia'', \emph{Fourth IEEE intl conf. on self-adaptive and self-organizing systems workshops} \doi{10.1109/SASOW.2010.26} September 27-28 2010, Budapest, Hungary.\\
+\years{2010a}\textbf{GLC}, Alberto Vancheri (2010), ``Empirical analysis of user participation in Online communities: the case of Wikipedia'', \emph{Fourth intl AAAI conf. on weblogs and social Media}, May 23-26 2010, Washington D.C., USA.\\ 
+\years{2008}\textbf{GLC}, Brunello Tirozzi (2008) ``Go east: a residential land use model for the periphery of Rome'', \emph{Intl cong. on environmental modelling and software}, July 7-10, 2008, Barcelona, Spain.\\
+\years{2007}Rachid Rebiha, \textbf{GLC} (2007), ``An ant colony verification algorithm'' \emph{Intl conf. on intelligent systems design and applications}, October 22-24 2007, Rion de Janeiro, Brazil.\\
+
+\subsection*{Presentations}
+\noindent
+\years{2009} ``Cooperation and conflict in Wikipedia'', \emph{International Workshop on Coping with Crises in Complex Socio-Economic Systems}, ETH Zürich, \html{http://videolectures.net/ccss09\_ciampaglia\_caciw/}
+
+% TODO mettere prima l'istituzione
+\section*{Teaching}
+\years{2010} Main lecturer / Modelling and simulating social systems with MATLAB\\
+\years{2008} Teaching assignment / Artificial Intelligence\\
+\years{2006} Teaching assignment / Networking
+
+%\vspace{1cm}
+\vfill{}
+%\hrulefill
+
+\begin{center}
+{\scriptsize  Last updated: \today\- •\- 
+% ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
+Typeset in \href{http://nitens.org/taraborelli/cvtex}{
+\fontspec{Nimbus Roman No9 L}\XeTeX}}\\
+\end{center}
+
+\end{document}
