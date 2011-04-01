@@ -1,0 +1,103 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage{fontspec} 
+\usepackage{lipsum}
+
+% DOCUMENT LAYOUT
+\pagestyle{empty}
+\usepackage{geometry} 
+\geometry{
+    a4paper, 
+    textwidth=5.5in,
+    textheight=8.5in,
+    marginparsep=7pt, 
+    marginparwidth=.6in
+}
+\setlength{\parskip}{1em}
+\setlength{\parindent}{1em}
+
+% FONTS
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+\setmonofont[Scale=1.0]{LMMono10}
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[dvipdfm, bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Giovanni Luca Ciampaglia - cover letter},
+	pdfauthor={Giovanni Luca Ciampaglia},
+	pdfproducer={http://www.inf.usi.ch/phd/ciampaglia/}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+\begin{document}
+
+% SENDER ADDRESS 
+\center
+\textsc{Giovanni Luca Ciampaglia\\
+Bertastraße 36\\
+\oldstylenums{8003} Zürich, Switzerland\\
++41 79 718 81 57\\
+\href{mailto:ciampagg@usi.ch}{ciampagg@usi.ch}
+}
+
+\raggedright
+\vspace{0.5in}
+\today\\[2em]
+
+% RECIPIENT ADDRESS
+Bryony Jones\\
+Wikimedia Foundation Inc.\\
+149 New Montgomery Street, 3rd Floor\\
+San Francisco, CA 94105\\
+USA\\
+\vspace{2em}
+
+% TEXT -- ADD YOUR LETTER HERE
+Dear Bryony:
+
+I would like to apply for the summer fellowship at the community department of
+the Wikimedia Foundation. My background is in computer science and I am working
+on social informatics research at the University of Lugano, Switzerland. In my
+doctoral dissertation I propose a model of commons-based peer production and
+with it I study the conditions for the existence of different levels of user
+participation.
+
+I have a solid knowledge of Python and its scientific libraries and a good
+experience of large-scale data analysis tasks on Mediawiki database dumps from
+the English Wikipedia. I also recently developed an interactive web application
+using technologies such as Django and jQuery.
+
+I think that my research has the potentials for helping the Foundation in its
+core mission of making Wikipedia and her sibling projects a long-term,
+sustainable effort for the dissemination of human knowledge, and in providing a
+viable alternative to classical organizational structures.
+
+Besides my CV, enclosed within this application you will find: an excerpt of 10
+pages with the introduction from my doctoral dissertation proposal, which was
+accepted by my doctoral committee last June; two of my recent academic
+publications; the latest draft of a chapter from my doctoral dissertation.
+
+Due to time constraints with my thesis, my availability for the fellowship
+would be for the month of August and possibly with part of July.
+
+% SIGNATURE -- PUT YOUR NAME IN EMPH 
+\vspace{2em}
+\raggedleft
+With my best regards,\\
+\emph{Giovanni Luca Ciampaglia}\\[1em]
+\vfill
+\raggedright
+Enclosed:\\[.1cm]
+\footnotesize
+\texttt{curriculum\_glc.pdf}\\
+\texttt{phdproposal\_excerpt.pdf}\\
+\texttt{icwsm2010\_full.pdf}\\
+\texttt{saso2010.pdf}\\ 
+\texttt{gsa\_draft.pdf}
+
+
+\end{document}
