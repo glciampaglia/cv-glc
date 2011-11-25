@@ -27,7 +27,6 @@
 \newcommand{\grey}[1]{{\bfseries\addfontfeature{Scale=.85,Color=33333399}{#1}}}
 \usepackage{placeins}
 
-
 % HEADINGS
 \usepackage{sectsty} 
 \usepackage[normalem]{ulem} 
@@ -135,21 +134,30 @@ Architects}, \href{http://zoozmag.com/zooz/Home_en.html}{Zooz Magazine} and
     web application implements a specific version of the ultimatum game, in
     which participants bargain over the time needed to perform a certain
     repetitive task (summing small numbers) which, upon completion, will make
-    them eligible of a fixed monetary reward. The webapp was developed as part
-    of a research project at the Chair of Sociology, in particular Modeling and
-    Simulation of the Swiss Federal Institute of Technology of Zürich,
+    them eligible of a fixed monetary reward. 
+    
+    The webapp was developed as part of a research project at the Chair of
+    Sociology, in particular Modeling and Simulation of the Swiss Federal
+    Institute of Technology of Zürich,
     Switzerland.\footnote{\url{http://www.soms.ethz.ch}} 
 
     \subsubsection*{Facts \& figures}
-    The web app was developed using the Python web framework
-    Django\footnote{\url{https://www.djangoproject.com}},
-    SQLite\footnote{\url{http://sqlite.com}} and
-    MySQL\footnote{\url{http://mysql.com}}. The web app takes each pair of
-    players through the stages of the bargaining process with an interactive UI.
-    All interactive features are implemented with the JavaScript library
-    jQuery\footnote{\url{http://jquery.com}}. The webapp is optimized in terms of
-    bandwidth in order to allow several pairs of participations to play the
-    ultimatum game simultaneously.
+    
+    Deployment on Apache + MySQL. HTTP and Ajax Message exchange was optimized
+    for low latency: on a single-processor virtual host the webapp could handle
+    around 40 concurrent games. Some additional features:
+
+    \begin{itemize}
+            \setlength\itemsep{0mm}
+            \setlength\parskip{0mm}
+        \item Game stage redirection using HTTP sessions and cookies
+        \item Real-time Ajax game interface
+        \item Custom login procedure using session pass-codes
+        \item Monitoring interface for the experimenter
+        \item PDF payment coupons (using
+            <HTML>DOC\footnote{\url{http://www.htmldoc.org}})
+        \item Browser detection middleware
+    \end{itemize}
 
 \end{minipage}
 \vspace{1cm}
