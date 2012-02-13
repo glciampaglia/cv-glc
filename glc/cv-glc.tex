@@ -45,6 +45,22 @@
 ]{hyperref}  
 \hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
 
+% BIB
+\usepackage[style=authortitle,maxnames=10,sorting=ynt,dashed=false]{biblatex}
+
+\DeclareBibliographyCategory{peerreviewed}
+\addtocategory{peerreviewed}{Rebiha2007, Ciampaglia2008, Ciampaglia2010, %
+        Taraborelli2010, Ciampaglia2011}
+
+\DeclareBibliographyCategory{workingpapers}
+\addtocategory{workingpapers}{Millner2008, Ciampaglia2012, Ciampaglia2012a}
+
+\DeclareBibliographyCategory{theses}
+\addtocategory{theses}{Ciampaglia2006, Ciampaglia2011a}
+\addbibresource{personal.bib}
+
+\nocite{*}
+
 % DOCUMENT
 \begin{document}
 {\LARGE Giovanni Luca Ciampaglia}\\[1cm]
@@ -137,41 +153,11 @@ French (basic proficiency)
 
 \section*{Publications \& talks}
 
-\subsection*{Peer-reviewed conference papers}
-\noindent
-\years{2011} ``A bounded confidence approach to understanding user participation
-in peer production systems'', \emph{Lecture Notes in Computer Science} Vol.
-6984, pp. 269--282. \doi{http://dx.doi.org/10.1007/978-3-642-24704-0\_29}\\
-%
-\years{2010b} ``Beyond notability. Collective deliberation on content inclusion
-in Wikipedia'', (with Dario Taraborelli) \emph{Fourth IEEE intl conf. on
-self-adaptive and self-organizing systems workshops} September 27-28 2010,
-Budapest, Hungary. \doi{http://dx.doi.org/10.1109/SASOW.2010.26}\\
-%
-\years{2010a} ``Empirical analysis of user participation in Online communities:
-the case of Wikipedia'', (with Alberto Vancheri) \emph{Fourth intl AAAI conf. on
-weblogs and social Media}, May 23-26 2010, Washington D.C., USA.
-\pdf{http://www.aaai.org/ocs/index.php/ICWSM/ICWSM10/paper/download/1517/1861}\\
-%
-\years{2008} ``Go east: a residential land use model for the periphery of
-Rome'', (with B. Tirozzi) \emph{Intl cong. on environmental modelling and
-software}, July 7-10, 2008, Barcelona, Spain.
-\pdf{http://www.inf.usi.ch/phd/ciampaglia/papers/RomeModel2008.pdf}\\
-%
-\years{2007} ``An ant colony verification algorithm'', (with Rachid Rebiha)
-\emph{Intl conf. on intelligent systems design and applications}, October 22-24
-2007, Rio de Janeiro, Brazil.
-\pdf{http://www.inf.usi.ch/phd/ciampaglia/papers/RebihaACOVerification07.pdf}\\
-
-\subsection*{Theses \& Working papers}
-\noindent
-\years{2008} ``The cost of strategic adaptation in a simple conceptual model of
-climate change.'' (with A. Millner, N. Aravamudan, and J. Foster) Working Paper
-for the Santa Fe Institute Complex Systems Summer School.
-\pdf{http://www.santafe.edu/events/workshops/images/3/32/Simpleclimatechange.pdf}\\
-%
-\years{2006} ``Modello di sviluppo urbano mediate automi cellulari e sistemi
-multi-agente'', MSc Thesis in Computer Science.\\
+\printbibliography[heading=subbibliography,title=Peer-reviewed publications,%
+        category=peerreviewed]
+\printbibliography[heading=subbibliography,title=Working papers, %
+        category=workingpapers]
+\printbibliography[heading=subbibliography,title=Theses,category=theses]
 
 \subsection*{Invited Talks}
 
