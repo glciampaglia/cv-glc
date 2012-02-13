@@ -1,0 +1,93 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage{fontspec} 
+\usepackage{lipsum}
+
+% DOCUMENT LAYOUT
+\pagestyle{empty}
+\usepackage{geometry} 
+\geometry{
+    a4paper, 
+    textwidth=5.5in,
+    textheight=8.5in,
+    marginparsep=7pt, 
+    marginparwidth=.6in
+}
+\setlength{\parskip}{1em}
+\setlength{\parindent}{1em}
+
+% FONTS
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+\setmonofont[Scale=1.0]{LMMono10}
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[dvipdfm, bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Giovanni Luca Ciampaglia - cover letter},
+	pdfauthor={Giovanni Luca Ciampaglia},
+	pdfproducer={http://www.inf.usi.ch/phd/ciampaglia/}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+\begin{document}
+
+% SENDER ADDRESS 
+\center
+\textsc{Giovanni Luca Ciampaglia\\
+Bertastraße 36\\
+\oldstylenums{8003} Zürich, Switzerland\\
++41 79 718 81 57\\
+\href{mailto:ciampagg@usi.ch}{ciampagg@usi.ch}
+}
+
+\raggedright
+\vspace{0.5in}
+\today\\[2em]
+
+% RECIPIENT ADDRESS
+\textsc{gsadi} -- Analytical Sociology and Institutional Design\\
+Department of Sociology\\ 
+B Building Campus UAB \\
+08193 Bellaterra (Cerdanyola del Vallès)\\
+\vspace{2em}
+
+% TEXT -- ADD YOUR LETTER HERE
+
+My research is about web communities, in particular commons-based peer
+production systems. During my doctoral studies I have worked on two problems
+related to peer production. The first is the problem of norm formation and how
+it impacts user participation, and to a more general extent, community
+formation. The second is the problem of collective deliberation and task
+allocation.
+
+In the first work I developed an agent-based model of norm formation in a peer
+production community, inspired by continuous models of opinion dynamics under
+bounded confidence, and compared it against empirical data on the activity
+lifespan of editors from the communities of five of the largest language
+versions of Wikipedia. The calibration of the model was performed using a
+surrogate model of the computer code based on Gaussian process regression. This
+work forms the core of my doctoral dissertation.
+
+The second work originates from a collaboration with Dr. Dario Taraborelli
+(CRESS, University of Surrey). We analyzed a sample of 200,000+ Article for
+Deletion (AfD) discussions from the English Wikipedia and explored the existence
+of possible biases in the discussion process originating from the structure of
+the discussions and from the polarization of editors into different factions.
+This work led also to the creation of an
+infographic\footnote{\url{http://notabilia.net}}, which visualizes the pattern
+of discussions of the 100 longest AfD discussions.
+
+Even though my education is in computer science, my research interests are
+aimed at a strong multidisciplinary curriculum; therefore I am interested in
+joining your group.
+
+\vfill
+\raggedleft
+With my best regards,\\
+\emph{Giovanni Luca Ciampaglia}
+
+\end{document}
