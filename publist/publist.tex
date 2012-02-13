@@ -1,0 +1,27 @@
+\documentclass{article}
+
+\usepackage[style=authortitle,maxnames=10,sorting=ynt,dashed=false]{biblatex}
+
+\DeclareBibliographyCategory{peerreviewed}
+\addtocategory{peerreviewed}{Rebiha2007, Ciampaglia2008, Ciampaglia2010, %
+        Taraborelli2010, Ciampaglia2011}
+
+\DeclareBibliographyCategory{workingpapers}
+\addtocategory{workingpapers}{Millner2008, Ciampaglia2012, Ciampaglia2012a}
+
+\DeclareBibliographyCategory{theses}
+\addtocategory{theses}{Ciampaglia2006, Ciampaglia2011a}
+\addbibresource{personal.bib}
+
+\nocite{*}
+
+\begin{document}
+
+\printbibheading[title=Publications of Giovanni Luca Ciampaglia]
+\printbibliography[heading=subbibliography,title=Peer-reviewed publications,%
+        category=peerreviewed]
+\printbibliography[heading=subbibliography,title=Working papers, %
+        category=workingpapers]
+\printbibliography[heading=subbibliography,title=Theses,category=theses]
+
+\end{document}
