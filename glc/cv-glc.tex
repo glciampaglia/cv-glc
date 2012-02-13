@@ -1,5 +1,10 @@
 % :vim:let g:TexCompileRule_pdf='xelatex -interactionmode=nonstop $*'
 \documentclass[10pt, a4paper]{article}
+
+% refresh version information and import VC macros
+\immediate\write18{sh ../vc}
+\input{../vc}
+
 \usepackage{fontspec} 
 
 % DOCUMENT LAYOUT
@@ -34,6 +39,16 @@
 \sectionfont{\mdseries\upshape\Large}
 \subsectionfont{\mdseries\scshape\large} 
 \subsubsectionfont{\mdseries\upshape\normalsize} 
+
+% revision info in the page footer
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[RF]{\textcolor{gray}{\footnotesize Rev. \VCRevision\\\GITAuthorDate}}
+\fancyfoot[CF]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+% also, add \thispagestyle after \maketitle to override class prescription 
 
 % PDF SETUP
 % ---- FILL IN HERE THE DOC TITLE AND AUTHOR
