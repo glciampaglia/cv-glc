@@ -10,3 +10,15 @@
 *.run.xml
 
 vc.tex
+*.4ct
+*.4tc
+*.css
+*.docx
+*.html
+*.idv
+*.lg
+*.odt
+*.sxw
+*.tmp
+*.xdv
+*.xref
