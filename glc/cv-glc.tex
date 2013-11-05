@@ -1,10 +1,11 @@
-% :vim:let g:TexCompileRule_pdf='xelatex -interactionmode=nonstop $*'
+% :vim:let g:Tex_CompileRule_pdf='xelatex -interactionmode=nonstop $*'
 \documentclass[10pt, a4paper]{article}
 
 % refresh version information and import VC macros
 \immediate\write18{sh ../vc}
 \input{../vc}
 
+\usepackage[usenames,dvipsnames]{color} % fontspec loads color
 \usepackage{fontspec} 
 
 % DOCUMENT LAYOUT
@@ -13,12 +14,11 @@
 \setlength\parindent{0in}
 
 % FONTS
-\usepackage[usenames,dvipsnames]{color}
 \usepackage{xunicode}
 \usepackage{xltxtra}
 \defaultfontfeatures{Mapping=tex-text}
 \setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
-\setmonofont[Scale=1.0]{LMMono10}
+\setmonofont[Scale=1.0]{Latin Modern Mono}
 
 % ---- CUSTOM COMMANDS
 \chardef\&="E050
@@ -50,16 +50,6 @@
 \renewcommand{\headrulewidth}{0pt}
 % also, add \thispagestyle after \maketitle to override class prescription 
 
-% PDF SETUP
-% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
-\usepackage[dvipdfm, bookmarks, colorlinks, breaklinks, 
-% ---- FILL IN HERE THE TITLE AND AUTHOR
-	pdftitle={Giovanni Luca Ciampaglia - vita},
-	pdfauthor={Giovanni Luca Ciampaglia},
-	pdfproducer={http://www.inf.usi.ch/phd/ciampaglia/}
-]{hyperref}  
-\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
-
 % BIB
 \usepackage[style=authortitle,maxnames=10,sorting=ynt,dashed=false]{biblatex}
 
@@ -73,6 +63,14 @@
 \DeclareBibliographyCategory{theses}
 \addtocategory{theses}{Ciampaglia2006, Ciampaglia2011a}
 \addbibresource{personal.bib}
+
+% PDF SETUP
+\usepackage[bookmarks, colorlinks, breaklinks, 
+	pdftitle={Giovanni Luca Ciampaglia - vita},
+	pdfauthor={Giovanni Luca Ciampaglia},
+	pdfproducer={http://www.inf.usi.ch/phd/ciampaglia/}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
 
 \nocite{*}
 
