@@ -1,5 +1,5 @@
 % :vim:let g:Tex_CompileRule_pdf='xelatex -interactionmode=nonstop $*'
-\documentclass[10pt, a4paper]{article}
+\documentclass[10pt, letterpaper]{article}
 
 % refresh version information and import VC macros
 \immediate\write18{sh ./vc}
@@ -25,12 +25,13 @@
 \newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
 \newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
 \newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+
 % ---- MARGIN YEARS
 \usepackage{marginnote}
 \newcommand{\amper{}}{\chardef\amper="E0BD }
-\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\newcommand{\years}[1]{\marginnote{\small #1}}
 \renewcommand*{\raggedleftmarginnote}{}
-\setlength{\marginparsep}{7pt}
+\setlength{\marginparsep}{2em}
 \reversemarginpar
 
 % HEADINGS
@@ -50,17 +51,8 @@
 % also, add \thispagestyle after \maketitle to override class prescription 
 
 % BIB
-\usepackage[backend=biber,style=authortitle,maxnames=10,sorting=ynt,dashed=false]{biblatex}
+\usepackage[backend=biber,style=authortitle,maxnames=10,sorting=ydnt,dashed=false]{biblatex}
 
-\DeclareBibliographyCategory{peerreviewed}
-\addtocategory{peerreviewed}{Rebiha2007, Ciampaglia2008, Ciampaglia2010, %
-        Taraborelli2010, Ciampaglia2011}
-
-\DeclareBibliographyCategory{workingpapers}
-\addtocategory{workingpapers}{Millner2008, Ciampaglia2012, Ciampaglia2012a}
-
-\DeclareBibliographyCategory{theses}
-\addtocategory{theses}{Ciampaglia2006, Ciampaglia2011a}
 \addbibresource{personal.bib}
 
 % PDF SETUP
@@ -76,25 +68,30 @@
 % DOCUMENT
 \begin{document}
 {\LARGE Giovanni Luca Ciampaglia}\\[1cm]
-Bertastraße 36 / 8003 Zürich / Switzerland\\[.2cm]
-Phone: \texttt{+41 43 817 20 75}\\
-Mobile: \texttt{+41 79 718 81 57}\\
-Email: \href{mailto:ciampagg@usi.ch}{ciampagg@usi.ch}\\
+919 E 10th St \\
+Bloomington, IN 47408\\[.2cm]
+Phone: \texttt{1-812-855-7261}\\
+Email: \href{mailto:gciampag@indiana.edu}{glciampagl@gmail.com}\\
 \textsc{url}: \href{http://www.inf.usi.ch/phd/ciampaglia/}{http://www.inf.usi.ch/phd/ciampaglia/}\\[.2cm]
 Gender: Male\\
 Born:  July 12, 1980\\
-Nationality: Italian\\
-Swiss Residence Permit: Type B (valid for employment)
+Nationality: Italian
+
+\section*{Current Affiliation}
+
+Center for Complex Networks and Systems Research\\
+School of Informatics and Computing\\
+Indiana University Bloomington
 
 \section*{Areas of specialization}
-Computer science • Social informatics • Social computing  
+Complex systems • Collective social phenomena • Complex networks
 
 \section*{Competences}
-Agent-based modeling • Big data analytics • Simulation
+Modeling • Big data • Simulation
 
 \section*{Education}
 \noindent
-\years{2011}\textbf{Ph.D. in Informatics}\\
+\years{2012}\textbf{Ph.D. in Informatics}\\
 \textsl{Università della Svizzera Italiana}, Lugano, Switzerland\\
 \textsc{Supervisors}: Luca Gambardella (IDSIA), Alberto Vancheri (SUPSI), Paolo
 Giordano (TU Wien)\\[1em]
@@ -103,86 +100,100 @@ Giordano (TU Wien)\\[1em]
 \years{1999}\textbf{\textsl{Maturità Scientifica}}\\
 \textsl{Liceo Scientifico Isacco Newton}, Rome, Italy\\
 
-\section*{Appointments held}
-\subsection*{Consulting}
-\years{2012--present}\textbf{Wikimedia Foundation, Inc. (San Francisco, USA)}\\
+\section*{Research}
+
+\years{2013-present}\textbf{Indiana University (Bloomington, USA)}\\
+Postdoctoral fellow\\
+Center for Complex Networks and Systems Research (Prof. Filippo Menczer)\\
+
+\years{Jul.-Aug. 2011}\textbf{Wikimedia Foundation, Inc. (San Francisco, USA)}\\
+Research intern\\
+Wikimedia Summer of Research, Community Department (Dr. Diederik Van Liere)\\
+
+\years{2010-2011}\textbf{Swiss Federal Institute of Technology (Zürich, Switzerland)}\\ 
+Research associate\\
+Chair of Sociology, in particular Modeling and Simulation (Prof. Dirk
+Helbing)\\
+
+\section*{Teaching}
+
+\years{2010-2011}\textbf{Swiss Federal Institute of Technology  (Zürich, Switzerland)}\\ 
+Lecturer, Program in Humanities, Social and Political Sciences\\
+\emph{Lectures with Computer Exercises: Modelling and Simulating Social Systems
+with \textsc{matlab}}\\ 
+
+\years{2007-2008}\textbf{\textsl{Università della Svizzera Italiana} (Lugano, Switzerland)}\\
+Teaching assistant, Bachelor Program in Informatics\\
+\emph{Artificial Intelligence and Knowledge Management} (Prof. Luca Maria
+Gambardella)\\ 
+\emph{Computer Networking} (Prof. Antonio Carzaniga)\\
+
+\section*{Consulting}
+
+\years{2012-2013}\textbf{Wikimedia Foundation, Inc. (San Francisco, USA)}\\
 Research Analyst\\
 Technology Department, (Dr. Dario Taraborelli)\\
 
-\subsection*{Research}
-\years{2011}\textbf{Wikimedia Foundation, Inc. (San Francisco, USA)}\\
-Research fellow\\
-Wikimedia Summer of Research, Community Department (Dr. Diederik Van Liere)\\[.1cm]
-
-\years{2011}\textbf{ETH Zürich (Switzerland)}\\
-Research associate\\
-Chair of Sociology, in particular Modeling and Simulation (Prof. Dirk
-Helbing)\\[.1cm]
-
-\subsection*{Teaching}
-\years{2010}\textbf{ETH Zürich (Switzerland)}\\
-Lecturer\\
-Program in Humanities, Social and Political Sciences\\
-\emph{Lectures with Computer Exercises: Modelling and Simulating Social Systems
-with \textsc{matlab}} (30 h)\\[1em] 
-%
-\years{2008}\textbf{\textsl{Università della Svizzera Italiana} (Lugano, Switzerland)}\\
-Teaching assistant\\
-Bachelor Program in Informatics\\
-\emph{Artificial Intelligence and Knowledge Management} (18 h)\\[1em]
-%
-\years{2007}\textbf{\textsl{Università della Svizzera Italiana} (Lugano, Switzerland)}\\
-Teaching assistant\\
-Bachelor Program in Informatics\\
-\emph{Computer Networking} (18 h)\\[1em]
-
 \section*{Grants \& awards}
+\years{2012}\textsc{Prospective Researcher Fellowship} (18 Months) Swiss
+National Science Foundation\\
+\years{2012}\textsc{Best Interactive Visualization} KANTAR “Information is Beautiful” Awards.\\
 \years{2011}\textsc{Travel grant award} (SocInfo 2011) Singapore Management University.\\
-%
 \years{2010}\textsc{Visiting studentship} (3 months) ETH Zürich, Switzerland\\
-%
 \years{2008}\textsc{Admission to summer school} (1 month) Santa Fe Institute
 Complex Systems Summer School.\\
-%
 \years{2006}\textsc{Doctoral studentship} (4 years) Swiss National Science
 Foundation\\
+ 
+\section*{Administration \& editorial activity}
+
+\years{2013-present} \textsc{Guest editor} EPJ Data Science\\
+\years{2012-present} \textsc{Reviewer} Adv. Comp. Sys., JASSS, ACM TOIS, IEEE
+Internet Computing\\ 
+\years{2013} \textsc{Workshop Co-organizer} Collective Behaviors and Networks,
+satellite workshop at ECCS'13.\\
+\years{2013} \textsc{Publicity chair} ACM Web Science 2014.\\
 
 \section*{IT \& programming}
 Programming languages: C, Java, MATLAB\\
-Scripting languages: Javascript, Python (incl. Cython), Bash, ZSH\\
-Parallel Computing: PBS, Hadoop, IPython\\
+Scripting languages: Javascript, Python/Cython, Unix Shell, VIM\\
+Parallel Computing: PBS, IPython, OpenMP, MPI\\
 Statistical analysis: R, SciPy + NumPy\\
-Network analysis: graph-tool, Gephi\\
-Database systems: MySQL, PostgreSQL, SQLite, MongoDB\\
+Network analysis: graph-tool, NetworkX, Gephi\\
+Database systems: MySQL, SQLite\\
 Web Frameworks: Django, jQuery\\
-Revision control: Darcs, SVN, Git\\
+Revision control: Git\\
 Digital typography: \LaTeX, \XeTeX\\
-Favorite editor: Vim\\
 Personal productivity system: GTD
 
 \section*{Languages}
 Italian (native speaker)\\
 English (professional proficiency)\\
+German (basic proficiency)\\
 French (basic proficiency)
 
 \section*{Publications \& talks}
 
-\printbibliography[heading=subbibliography,title=Peer-reviewed publications,%
-        category=peerreviewed]
-\printbibliography[heading=subbibliography,title=Working papers, %
-        category=workingpapers]
-\printbibliography[heading=subbibliography,title=Theses,category=theses]
+\printbibliography[heading=subbibliography,title=Journal papers,%
+        type=article]
+\printbibliography[heading=subbibliography,title=Conference proceedings, %
+        type=inproceedings]
+\printbibliography[heading=subbibliography,title=Theses \& miscellanea, %
+        nottype=article, nottype=inproceedings]
 
-\subsection*{Invited Talks}
+\subsection*{Talks \& presentations}
 
-\years{2009} ``Cooperation and Conflict in Wikipedia'', at International
-Workshop on Coping with Crises in Complex Socio-Economic Systems, ETH Z\"urich,
-June 8-12.
+\years{2012} 3rd Intl Conference on Social Informatics, Singapore
+Management University, October 6-8. Oral presentation.
 
-\years{2009} ``Opinion Formation and Participation Structure in Open Authoring
-Environments'', at USI-UZH p2p Workshop, \textsl{Università della Svizzera
-Italiana},
-June 17.
+\years{2010} 4th Intl AAAI Conference on Weblogs
+and Social Media, George Washington University, May 23-26. Poster presentation.
+
+\years{2009} Intl Workshop on Coping with Crises in Complex
+Socio-Economic Systems, ETH Z\"urich, June 8-12. Oral presentation.
+
+\years{2009} USI-UZH p2p Workshop, \textsl{Università
+della Svizzera Italiana}, June 17. Oral presentation.
 
 %\vspace{1cm}
 \vfill{}
