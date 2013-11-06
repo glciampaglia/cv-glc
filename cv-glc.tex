@@ -5,7 +5,6 @@
 \immediate\write18{sh ./vc}
 \input{./vc}
 
-\usepackage[usenames,dvipsnames]{color} % fontspec loads color
 \usepackage{fontspec} 
 
 % DOCUMENT LAYOUT
@@ -16,6 +15,7 @@
 % FONTS
 \usepackage{xunicode}
 \usepackage{xltxtra}
+\usepackage[usenames,dvipsnames]{xcolor} % fontspec loads color
 \defaultfontfeatures{Mapping=tex-text}
 \setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
 \setmonofont[Scale=1.0]{Latin Modern Mono}
@@ -42,7 +42,6 @@
 
 % revision info in the page footer
 \usepackage{fancyhdr}
-\usepackage{xcolor}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot[RF]{\textcolor{gray}{\footnotesize Rev. \VCRevision\\\GITAuthorDate}}
@@ -51,7 +50,7 @@
 % also, add \thispagestyle after \maketitle to override class prescription 
 
 % BIB
-\usepackage[style=authortitle,maxnames=10,sorting=ynt,dashed=false]{biblatex}
+\usepackage[backend=biber,style=authortitle,maxnames=10,sorting=ynt,dashed=false]{biblatex}
 
 \DeclareBibliographyCategory{peerreviewed}
 \addtocategory{peerreviewed}{Rebiha2007, Ciampaglia2008, Ciampaglia2010, %

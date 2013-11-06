@@ -1,11 +1,12 @@
 .PHONY: cv
 
-cv: cv-glc.pdf
+all: cv-glc.pdf portfolio.pdf publist.pdf
 
-cv-glc.pdf: cv-glc.tex
+%.pdf: %.tex
 	xelatex -shell-escape $^
-	bibtex8 $(patsubst %.tex, %, $^)
+	biber $(patsubst %.tex, %, $^)
+	xelatex -shell-escape $^
 	xelatex -shell-escape $^
 
 clean:
-	rm -f *.pdf
+	rm -f *.pdf *.aux *.bbl *.blg *-blx.bib *.out *.log *.run.xml
