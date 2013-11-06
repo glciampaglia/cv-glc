@@ -1,6 +1,9 @@
 .PHONY: cv
 
-all: cv-glc.pdf portfolio.pdf publist.pdf
+all: cv-glc.pdf portfolio.pdf publist.pdf eu.pdf
+
+eu.pdf: eu.tex
+	xelatex -shell-escape $^
 
 portfolio.pdf: portfolio.tex
 	xelatex -shell-escape $^
