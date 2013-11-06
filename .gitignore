@@ -22,3 +22,4 @@ vc.tex
 *.tmp
 *.xdv
 *.xref
+*.bcf
