@@ -9,4 +9,4 @@ all: cv-glc.pdf portfolio.pdf publist.pdf
 	xelatex -shell-escape $^
 
 clean:
-	rm -f *.pdf *.aux *.bbl *.blg *-blx.bib *.out *.log *.run.xml
+	rm -f *.pdf *.aux *.bbl *.blg *-blx.bib *.out *.log *.run.xml *.bcf
