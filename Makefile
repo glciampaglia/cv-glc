@@ -10,8 +10,8 @@ portfolio.pdf: portfolio.tex
 
 %.pdf: %.tex
 	xelatex -shell-escape $^
-	biber $(patsubst %.tex, %, $^)
 	xelatex -shell-escape $^
+	biber $(patsubst %.tex, %, $^)
 	xelatex -shell-escape $^
 
 clean:
