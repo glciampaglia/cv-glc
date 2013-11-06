@@ -2,6 +2,9 @@
 
 all: cv-glc.pdf portfolio.pdf publist.pdf
 
+portfolio.pdf: portfolio.tex
+	xelatex -shell-escape $^
+
 %.pdf: %.tex
 	xelatex -shell-escape $^
 	biber $(patsubst %.tex, %, $^)
