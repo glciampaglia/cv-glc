@@ -1,0 +1,331 @@
+% :vim:let g:Tex_CompileRule_pdf='xelatex -interactionmode=nonstop $*'
+\documentclass[10pt, letterpaper, italian]{article}
+
+% refresh version information and import VC macros
+\immediate\write18{sh ./vc}
+\input{./vc}
+
+\usepackage{fontspec} 
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage[usenames,dvipsnames]{xcolor} % fontspec loads color
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+\setmonofont[Scale=1.0]{Latin Modern Mono}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\small #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{2em}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\large} 
+\subsubsectionfont{\mdseries\upshape\normalsize} 
+
+% revision info in the page footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[RF]{\textcolor{gray}{\footnotesize Rev. \VCRevision\\\GITAuthorDate}}
+\fancyfoot[CF]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+% also, add \thispagestyle after \maketitle to override class prescription 
+
+% BIB
+\usepackage[backend=biber,style=authortitle,maxnames=10,sorting=ydnt,dashed=false]{biblatex}
+
+\addbibresource{personal.bib}
+
+% PDF SETUP
+\usepackage[bookmarks, colorlinks, breaklinks, 
+	pdftitle={Giovanni Luca Ciampaglia - vita},
+	pdfauthor={Giovanni Luca Ciampaglia},
+	pdfproducer={http://glciampaglia.com/}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+\nocite{*}
+
+% DOCUMENT
+\begin{document}
+{\LARGE Giovanni Luca Ciampaglia}\\[1cm]
+% \textcolor{gray}{\emph{(Joh-vah-nee Loo-kah Chahm-pa-yaa)}}\\[1cm]
+919 E 10th St \\
+Bloomington, IN 47408\\[.2cm]
+Tel: \texttt{1-812-855-7261}\\
+Email: \href{mailto:gciampag@indiana.edu}{glciampagl@gmail.com}\\
+Github: \href{http://github.com/glciampaglia}{glciampaglia} (estratti di codice sorgente disponibili su richiesta)\\
+\textsc{url}: \href{http://www.glciampaglia.com/}{www.glciampaglia.com}\\[.2cm]
+Genere: Male\\
+Data di nascita:  July 12, 1980\\
+Nazionalità: Italiana (Detentore di visto J1 per gli Stati Uniti)
+
+\section*{Affiliazione corrente}
+
+Indiana University Network Science Institute\\
+School of Informatics and Computing\\
+Indiana University Bloomington
+
+\section*{Aree di specializzazione}
+Sistemi complessi • Scienza delle reti • Fenomeni sociali collettivi
+
+%\section*{Competences}
+%Modeling • Big data • Simulation
+
+\section*{Istruzione}
+\noindent
+
+\years{2012}\textbf{Dottorato in Informatica}\\
+%
+Università della Svizzera Italiana, Lugano, Svizzera\\
+%
+\textsc{Relatori}: Luca Gambardella (IDSIA), Alberto Vancheri (SUPSI), Paolo
+Giordano (TU Wien)\\[1em]
+
+\years{2006}\textbf{Laurea in Informatica (v.o.)}\\ 
+%
+Università degli Studi di Roma ``La Sapienza''\\
+%
+\textsc{Relatore}: Brunello Tirozzi \\[1em]
+
+\years{1999}\textbf{Maturità Scientifica}\\
+%
+Liceo Scientifico Isacco Newton, Roma
+
+\section*{Ricerca}
+
+\years{2015-present}\textbf{Indiana University} (Bloomington, USA)\\
+%
+Ricercatore (\textsl{Assistant Research Scientist})\\
+%
+Indiana University Network Science Institute\\
+
+\years{2013-2015}\textbf{Indiana University (Bloomington, USA)}\\
+%
+Assegnista di ricerca finanziato dal Fondo Nazionale Svizzero per la Ricerca Scientifica\\
+%
+Center for Complex Networks and Systems Research (Prof. Filippo Menczer)\\
+
+\years{Lug.-Ago. 2011}\textbf{Wikimedia Foundation, Inc. (San Francisco, USA)}\\
+%
+Ricercatore tirocinante (\textsl{Research intern})\\
+%
+Wikimedia Summer of Research, Community Department (Dr. Diederik Van Liere)\\
+
+\years{2010-2011}\textbf{Politecnico Federale di Zurigo, Svizzera}\\ 
+%
+Ricercatore associato\\
+%
+Cattedra di \textsl{Computational Social Science} (Prof. Dr. Dirk Helbing)
+
+\section*{Insegnamento}
+
+\years{2015}\textbf{Indiana University Bloomington (USA)}\\
+%
+Docente per la \textsl{School of Informatics and Computing}\\
+%
+\emph{I690 Modellizzazione Matematica dei Sistemi Complessi: Introduzione alla Teoria dei Giochi}\\
+
+\years{2013}\textbf{Indiana University Bloomington (USA)}\\
+%
+Docente per la \textsl{School of Informatics and Computing}\\
+%
+\emph{I690 Modellizzazione Matematica dei Sistemi Complessi: Introduzione ai Modelli Multi-Agente}\\
+
+\years{2010-2011}\textbf{Politecnico Federale di Zurigo, Svizzera}\\ 
+%
+Docente, Corso di Scienze Umanistiche, Sociali e Politiche\\
+%
+\emph{Laboratorio Informatico: Modellizzazione e Simulazione dei Sistem Social con \textsc{matlab}}\\ 
+
+\years{2007-2008}\textbf{\textsl{Università della Svizzera Italiana} (Lugano,
+Svizzera)}\\
+%
+Assistente, Corso di \textsl{Bachelor} in Informatica\\
+%
+\emph{Intelligenza Artificiale e Gestione della Conoscenza} (Prof. Luca Maria
+Gambardella)\\ 
+%
+\emph{Reti di Computer} (Prof. Antonio Carzaniga)
+
+\section*{Industria}
+
+\years{2012-2013}\textbf{Wikimedia Foundation, Inc. (San Francisco, USA)}\\
+%
+Analista Ricercatore\\
+%
+Technology Department, (Dr. Dario Taraborelli)
+
+\section*{Pubblicazioni \& interventi}
+
+\input{sectionbiblio-it}
+
+\subsection*{Interventi \& presentazioni}
+
+\years{2016}
+\href{http://www.poynter.org/2016/whats-does-the-future-of-automated-fact-checking-look-like/404937/}{Tech
+\& Check} Conference. Marzo 31. Relazione su invito.\\
+%
+\years{2015} \href{http://www.ttivanguard.com/}{TTI/Vanguard} ``Collaboration
+and the Future of the Workplace''. Ottobre 30. Relazione su invito.\\
+%
+\years{2015} Conference on Complex Systems (CCS'15). Settembre 28.
+Presentazione orale.\\
+%
+\years{2015} International Conference on Network Science (NetSci'15). Giugno 4.
+Presentazione orale.\\
+%
+\years{2015} ACM Conference on Computer-Supported Cooperative Work and Social
+Computing (CSCW'15). Marzo 16. Presentazione orale.\\
+%
+\years{2015} Advancing an industry/academic partnership model for Open
+Collaboration research. CSCW'15 satellite workshop. Vancouver, Marzo 14.
+Relazione su invito.\\
+%
+\years{2015} Leibniz Institute for the Social Sciences. Marzo 5. Relazione su
+invito.\\
+%
+\years{2015} CRASSH Symposium on Conspiracy Theories and Democracy.
+University of Cambridge, Marzo 3. Relazione su invito.\\
+%
+\years{2014} Ostrom Workshop Fall Colloquium, Indiana University, Dicembre 1.
+Presentazione orale.\\
+%
+\years{2014} Network Science Colloquium, Indiana University, Ottobre 13. 
+Presentazione orale.\\
+%
+\years{2014} 10th European Conference on Complex Systems (ECCS14), IMT Lucca,
+Settembre 22. Presentazione orale.\\
+%
+\years{2012} 3rd Intl Conference on Social Informatics, Singapore Management
+University, Ottobre 6-8. Presentazione orale.\\
+%
+\years{2010} 4th Intl AAAI Conference on Weblogs and Social Media, George
+Washington University, Maggio 23-26. Presentazione di poster.\\
+%
+\years{2009} Intl Workshop on Coping with Crises in Complex Socio-Economic
+Systems, ETH Z\"urich, Giugno 8-12. Presentazione orale.\\
+%
+\years{2009} USI-UZH p2p Workshop, \textsl{Università della Svizzera
+Italiana}, Giugno 17. Presentation orale.
+
+\section*{Finanziamenti \& premi}
+
+% \years{2015}\textsc{Co-Principal Investigator} (3 years, \$2M, \emph{submitted})
+% NSF 15-574: IIS-III (Medium) ``Mining Knowledge Networks for Computational Fact
+% Checking''.\\
+%
+\years{2012}\textsc{Assegno di ricerca post-dottorale} (18 mesi) Fondo
+Nazionale Svizzero per la Ricerca Scientifica.\\
+%
+\years{2012}\textsc{Migliore visualizzazione interattiva} KANTAR “Information
+is Beautiful” Awards.\\
+%
+\years{2011}\textsc{Finanziamento per spese di viaggio} (SocInfo 2011)
+Singapore Management University.\\
+%
+\years{2010}\textsc{Borsa di studio} (3 mesi) Politecnico Federale di Zurigo, Svizzera.\\
+%
+\years{2008}\textsc{Ammissione a scuola estiva} (1 mese) Santa Fe Institute
+Complex Systems Summer School.\\
+%
+\years{2006}\textsc{Borsa di studio} (4 years) Fondo Nazionale Svizzero per la Ricerca Scientifica.
+ 
+\section*{Servizio}
+
+\years{2016} \textsc{Co-organizzatore}: workshop satellite ``Open Science for an Open Society'' alla Conferenza sui Sistemi Complessi.\\
+%
+\years{2016} \textsc{Co-organizzatore}: workshop satellite ``Computational Social Science'' alla Conferenza sui Sistemi Complessi.\\
+%
+\years{2015} \textsc{Co-organizzatore}: workshop satellite ``Computational Social Science'' alla Conferenza sui Sistemi Complessi.\\
+%
+\years{2015-presente} \textsc{Membro del consiglio consultivo}: Open Collaboration Data
+Factory (Finanziamento 144920, National Science Foundation degli USA).\\
+%
+\years{2014-presente} \textsc{Membro}: SIGWEB.\\
+%
+\years{2014-presente} \textsc{Membro}: Complex Systems Society.\\
+%
+\years{2014} \textsc{Direttore della pubblicità}: Conferenza ``ACM Web Science'' 2014.\\
+%
+\years{2014} \textsc{Co-organizzatore}: workshop satellite ``Computational Social Science'' alla Conferenza sui Sistem Complessi.\\
+%
+\years{2013-2014} \textsc{Curatore ospite}: Rivista internazionale a revisione paritaria ed accesso aperto ``EPJ Data Science''.\\
+%
+\years{2013} \textsc{Co-organizzatore}: workshop satellite ``Collective Behaviors and Networks'', alla Conferenza Europea sui Sistemi Complessi.\\
+%
+\years{2012-presente} \textsc{Revisore} per le seguenti riviste o conferenze
+internazionali: Scientific Reports, Network Science, Frontiers in ICT, PeerJ
+Computer Science, CSCW (\emph{distinguished reviewer}), Entropy, EPJ Data
+Science, Adv. Comp. Sys., JASSS, ACM TOIS, IEEE Internet Computing, PLoS ONE, Wikimedia
+Research Newsletter.\\ 
+%
+\years{2014-presente} \textsc{Membro del comitato scientifico} dei seguenti workshop o conferenze internazionali:
+\href{http://www.snow-workshop.org/}{SNOW} (2014, 2016), CompleNet (2016),
+\href{http://cnets.indiana.edu/cool2014/}{COOL}, CRIMENET (2014), DataWiz
+(2014), \href{http://dyad.di.unito.it/}{DYAD} (2014), HyperText (2015), SocInfo
+(2014, 2016).\\
+
+% \section*{IT \& programming}
+% 
+% Programming languages: C, Java, MATLAB.\\
+% %
+% Scripting languages: Javascript, Python/Cython, Unix Shell, VIM.\\
+% %
+% Parallel Computing: PBS, IPython, OpenMP, MPI, PIG, Hive.\\
+% %
+% Statistical analysis: R, SciPy + NumPy.\\
+% %
+% Network analysis: graph-tool, NetworkX, Gephi.\\
+% %
+% Database systems: MySQL, SQLite.\\
+% %
+% Web Frameworks: Django, jQuery.\\
+% %
+% Revision control: Git.\\
+% %
+% Digital typography: \LaTeX, \XeTeX.\\
+% %
+% Personal productivity system: GTD.
+
+\section*{Lingue}
+
+Italiano (madrelingua)\\
+%
+Inglese (livello C2)\\
+%
+Tedesco (livello A1)\\
+%
+Livello (livello A1)
+
+%\vspace{1cm}
+\vfill{}
+%\hrulefill
+
+\begin{center}
+{\scriptsize  Last updated: \today\- •\- 
+% ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
+Typeset in {\fontspec{Nimbus Roman No9 L} \XeTeX}\\
+\href{http://glciampaglia.com}{http://glciampaglia.com}}
+\end{center}
+
+\end{document}
