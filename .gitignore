@@ -23,3 +23,6 @@ vc.tex
 *.xdv
 *.xref
 *.bcf
+*.fdb_latexmk
+*.fls
+*.synctex.gz
