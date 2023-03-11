@@ -2,16 +2,12 @@
 
 all: cv-glc-it.pdf cv-glc.pdf portfolio.pdf publist.pdf eu.pdf
 
-eu.pdf: eu.tex
-	xelatex -shell-escape $^
-
-portfolio.pdf: portfolio.tex
-	xelatex -shell-escape $^
+cv: cv-glc.pdf
 
 %.pdf: %.tex
 	xelatex -shell-escape $^
-	xelatex -shell-escape $^
 	biber $(patsubst %.tex, %, $^)
+	xelatex -shell-escape $^
 	xelatex -shell-escape $^
 
 clean:
