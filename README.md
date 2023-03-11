@@ -65,6 +65,6 @@ To clean up any intermediate files run:
 ## Editing setup
 
 The best way to edit the CV is to use VIM with the
-[vimtex](//github.com:lervag/vimtex.git) plugin, latexmk for real-time
+[vimtex](//github.com/lervag/vimtex.git) plugin, latexmk for real-time
 compilation, and [SVED](https://github.com/peder2tm/sved.git) for
 synchronization between the text editor (VIM) and the PDF viewer (evince). 
