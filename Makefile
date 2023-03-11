@@ -15,4 +15,5 @@ portfolio.pdf: portfolio.tex
 	xelatex -shell-escape $^
 
 clean:
-	rm -f *.pdf *.aux *.bbl *.blg *-blx.bib *.out *.log *.run.xml *.bcf
+	rm -f *.pdf *.aux *.bbl *.blg *-blx.bib *.out *.log *.run.xml *.bcf \
+		*.synctex.gz *.fdb_latexmk *.fls *.bib.sav.tmp *.xdv *.bib.bak
