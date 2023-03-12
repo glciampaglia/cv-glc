@@ -34,6 +34,7 @@ The main requirements to compile **cv-glc.tex** are:
 
 * [XeTeX](https://tug.org/xetex/);
 * [Biblatex](https://biblatex.org/) with [Biber](https://github.com/plk/biber) as the backend;
+* Linux Libertine and Latin Modern fonts;
 * git and awk to be able to run the [VC bundle](https://ctan.org/pkg/vc).
 
 ## Compiling
